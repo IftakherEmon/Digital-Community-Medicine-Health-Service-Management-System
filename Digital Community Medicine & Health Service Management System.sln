@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36616.10 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digital Community Medicine & Health Service Management System", "Digital Community Medicine & Health Service Management System\Digital Community Medicine & Health Service Management System.csproj", "{5EE4ACC0-280C-4A92-BBF7-7A9C84700B49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EE4ACC0-280C-4A92-BBF7-7A9C84700B49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EE4ACC0-280C-4A92-BBF7-7A9C84700B49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EE4ACC0-280C-4A92-BBF7-7A9C84700B49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EE4ACC0-280C-4A92-BBF7-7A9C84700B49}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4A4F7E4D-64EE-461E-B655-FADBE1B6E978}
+	EndGlobalSection
+EndGlobal
