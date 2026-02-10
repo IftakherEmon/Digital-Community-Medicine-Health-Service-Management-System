@@ -1,0 +1,208 @@
+1) Users
+   - UserId (PK)
+   - Email
+   - PasswordHash
+   - Role
+   - IsActive
+   - CreatedAt
+
+2) Admin
+   - AdminId (PK)
+   - UserId (FK)
+   - CreatedAt
+
+3) ServiceLocation
+   - LocationId (PK)
+   - Area
+   - City
+   - CreatedAt
+
+4) Clinic
+   - ClinicId (PK)
+   - LocationId (FK)
+   - ClinicName
+   - CreatedAt
+
+5) Patient
+   - PatientId (PK)
+   - UserId (FK)
+   - FullName
+   - Gender
+   - DateOfBirth
+   - Phone
+   - CreatedAt
+
+6) PatientMedicalHistory
+   - HistoryId (PK)
+   - PatientId (FK)
+   - Description
+   - CreatedAt
+
+7) Doctor
+   - DoctorId (PK)
+   - UserId (FK)
+   - Specialization
+   - LicenseNumber
+   - CreatedAt
+
+8) DoctorClinic
+   - DoctorClinicId (PK)
+   - DoctorId (FK)
+   - ClinicId (FK)
+
+9) DoctorAvailability
+   - AvailabilityId (PK)
+   - DoctorId (FK)
+   - DayOfWeek
+   - StartTime
+   - EndTime
+
+10) AppointmentSlot
+    - SlotId (PK)
+    - AvailabilityId (FK)
+    - SlotTime
+    - IsBooked
+
+11) Appointment
+    - AppointmentId (PK)
+    - PatientId (FK)
+    - DoctorId (FK)
+    - SlotId (FK)
+    - AppointmentDate
+    - Status
+    - CreatedAt
+
+12) Pharmacy
+    - PharmacyId (PK)
+    - LocationId (FK)
+    - PharmacyName
+    - IsActive
+    - CreatedAt
+
+13) Pharmacist
+    - PharmacistId (PK)
+    - UserId (FK)
+    - PharmacyId (FK)
+    - CreatedAt
+
+14) MedicineCategory
+    - CategoryId (PK)
+    - CategoryName
+
+15) Medicine
+    - MedicineId (PK)
+    - CategoryId (FK)
+    - MedicineName
+    - Price
+
+16) PharmacyInventory
+    - InventoryId (PK)
+    - PharmacyId (FK)
+    - MedicineId (FK)
+    - Quantity
+
+17) Prescription
+    - PrescriptionId (PK)
+    - AppointmentId (FK)
+    - CreatedAt
+
+18) PrescriptionMedicine
+    - PrescriptionMedicineId (PK)
+    - PrescriptionId (FK)
+    - MedicineId (FK)
+    - Dosage
+
+19) Cart
+    - CartId (PK)
+    - PatientId (FK)
+
+20) CartItem
+    - CartItemId (PK)
+    - CartId (FK)
+    - MedicineId (FK)
+    - Quantity
+
+21) MedicineOrder
+    - OrderId (PK)
+    - PatientId (FK)
+    - TotalAmount
+    - CreatedAt
+
+22) MedicineOrderItem
+    - OrderItemId (PK)
+    - OrderId (FK)
+    - MedicineId (FK)
+    - Quantity
+    - Price
+
+23) OrderPrescription
+    - OrderPrescriptionId (PK)
+    - OrderId (FK)
+    - PrescriptionId (FK)
+    - VerificationStatus
+    - VerifiedByPharmacistId (FK)
+    - VerificationNotes
+    - VerifiedAt
+
+24) OrderStatusHistory
+    - HistoryId (PK)
+    - OrderId (FK)
+    - Status
+    - ChangedAt
+
+25) Payment
+    - PaymentId (PK)
+    - OrderId (FK)
+    - Amount
+    - PaymentMethod
+    - PaymentDate
+
+26) FollowUpReminder
+    - ReminderId (PK)
+    - PatientId (FK)
+    - Message
+    - ReminderDate
+
+27) Ambulance
+    - AmbulanceId (PK)
+    - LocationId (FK)
+    - VehicleNumber
+    - IsAvailable
+
+28) EmergencyRequest
+    - EmergencyId (PK)
+    - PatientId (FK)
+    - LocationId (FK)
+    - Status
+    - RequestedAt
+
+29) DoctorReview
+    - ReviewId (PK)
+    - DoctorId (FK)
+    - PatientId (FK)
+    - Rating
+    - Comment
+    - CreatedAt
+
+30) NotificationLog
+    - NotificationId (PK)
+    - UserId (FK)
+    - Message
+    - CreatedAt
+
+31) Complaint
+    - ComplaintId (PK)
+    - UserId (FK)
+    - ComplaintType
+    - Description
+    - Status
+    - Priority
+    - CreatedAt
+
+32) DiagnosticLab
+    - LabId (PK)
+    - LocationId (FK)
+    - LabName
+    - LicenseNumber
+    - IsActive
+    - CreatedAt
