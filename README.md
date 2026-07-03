@@ -40,5 +40,7 @@ under one digital platform.
 4. Run the project
 
 ## Developed By
-Group-6  
-Department of CSE  
+1. Md.Iftakher Hossain
+2. Md. Sakibul Islam Siam
+3. Md. Emon Hasan Sohel
+4. Md. Ariful Haque  
